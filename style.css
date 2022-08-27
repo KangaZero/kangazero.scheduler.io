@@ -28,6 +28,7 @@ textarea {
 
 .description:hover{
   background-color: #cadcf6;
+  cursor: move;
 }
 
 .description:active{

@@ -25,57 +25,64 @@
 
   <body>
     <!--create sliding button, light & dark css properties, btn function-->
+    <!--https://www.w3schools.com/howto/howto_css_switch.asp-->
     <div class="dark-light-container">
-      <button class="light customBtn"></button>
+      <label class="switch light position-relative">
+        Light Mode
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
     </div>
-    <header class="jumbotron">
+    <header class="jumbotron col-10 col-sm-12">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <!--timer added-->
       <p id="currentDay" class="lead"></p>
       <p id="notification">Enter your schedule and click the save button!</p>
     </header>
-    <div class="container">
-      <div class="row hour-9 time-block">
+    <div class="container" id="draggable">
+      <div class="row hour-9 time-block mb-sm-2 mb-md-0">
         <!--button function, content save function, highlight current, previous and next hour function to make-->
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">9AM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-10 time-block">
+      <div class="row hour-10 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">10AM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-11 time-block">
+      <div class="row hour-11 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">11AM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-12 time-block">
+      <div class="row hour-12 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">12PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-13 time-block">
+      <div class="row hour-13 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">1PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-14 time-block">
+      <div class="row hour-14 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">2PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row hour-15 time-block">
+      <div class="row hour-15 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">3PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
-      </div><div class="row hour-16 time-block">
+      </div>
+      <div class="row hour-16 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">4PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
-      </div><div class="row hour-17 time-block">
+      </div>
+      <div class="row hour-17 time-block mb-sm-2 mb-md-0">
         <div class="col-12 col-md-6 col-lg-2 hour" id="time">5PM</div>
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
@@ -86,14 +93,12 @@
       <!--create load function, link to new page, load memory-->
       <button class="Btn col-2" id="loadBtn">See Saved</button>
      </div>
-
     <script
   src="https://code.jquery.com/jquery-3.6.1.js"
   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <!-- load times too long if ui is implemented-->
+  <!-- <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
     <script src="./assets/script.js"></script>
-    <script>
-
-    </script>
 </html>
