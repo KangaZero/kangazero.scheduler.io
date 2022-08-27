@@ -27,38 +27,64 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!--timer added-->
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-2" id="time">10 am</div>
-        <div class="col-12 col-md-6 col-lg-9" id="content">test words and text</div>
-        <div class="col-12 col-md-12 col-lg-1" id="checkButton">Hi</div>
+      <div class="row hour-9 time-block">
+        <!--button function, content save function, highlight current, previous and next hour function to make-->
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">9AM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-2" id="time">11 am</div>
-        <div class="col-12 col-md-6 col-lg-9" id="content">test words and text</div>
-        <div class="col-12 col-md-12 col-lg-1" id="checkButton">Hi</div>
+      <div class="row hour-10 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">10AM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-2" id="time">12 pm</div>
-        <div class="col-12 col-md-6 col-lg-9" id="content">test words and text</div>
-        <div class="col-12 col-md-12 col-lg-1" id="checkButton">Hi</div>
+      <div class="row hour-11 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">11AM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-2" id="time">1 pm</div>
-        <div class="col-12 col-md-6 col-lg-9" id="content">test words and text</div>
-        <div class="col-12 col-md-12 col-lg-1" id="checkButton">Hi</div>
+      <div class="row hour-12 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">12PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-      <div class="row">
-        <div class="col-12 col-md-6 col-lg-2" id="time">2 pm</div>
-        <div class="col-12 col-md-6 col-lg-9" id="content">test words and text</div>
-        <div class="col-12 col-md-12 col-lg-1" id="checkButton">Hi</div>
+      <div class="row hour-13 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">1PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-
+      <div class="row hour-14 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">2PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
+      </div>
+      <div class="row hour-15 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">3PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
+      </div><div class="row hour-16 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">4PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
+      </div><div class="row hour-17 time-block">
+        <div class="col-12 col-md-6 col-lg-2 hour" id="time">5PM</div>
+        <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
+        <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
+      </div>
+     
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+    <script>
+
+    </script>
 </html>

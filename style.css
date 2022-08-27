@@ -23,6 +23,7 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+  background-color: aliceblue;
 }
 
 .time-block {
@@ -37,8 +38,8 @@ textarea {
 }
 
 .hour {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #c1d9e8;
+  color: #171212;
   border-top: 1px dashed #000000;
 }
 
@@ -61,8 +62,14 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
+  background-color: #73cbdf;
   color: white;
+}
+
+.saveBtn:hover {
+  background-color: #529cac;
+  box-shadow: #356d7a 10px;
+  
 }
 
 .saveBtn i:hover {
