@@ -26,6 +26,14 @@ textarea {
   background-color: aliceblue;
 }
 
+.description:hover{
+  background-color: #cadcf6;
+}
+
+.description:active{
+  background-color: #8db6ef;
+}
+
 .time-block {
   text-align: center;
   border-radius: 15px;

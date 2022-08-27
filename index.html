@@ -24,11 +24,16 @@
   </head>
 
   <body>
+    <!--create sliding button, light & dark css properties, btn function-->
+    <div class="dark-light-container">
+      <button class="light customBtn"></button>
+    </div>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <!--timer added-->
       <p id="currentDay" class="lead"></p>
+      <p id="notification">Enter your schedule and click the save button!</p>
     </header>
     <div class="container">
       <div class="row hour-9 time-block">
@@ -75,8 +80,12 @@
         <textarea class="col-12 col-md-6 col-lg-9 description" id="description">test words and text</textarea>
         <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton">Save</button>
       </div>
-     
-    </div>
+     </div>
+     <div class="display-flex row justify-content-center m-3" id="extras">
+      <button class="Btn col-2" id="refreshBtn">Clear All</button>
+      <!--create load function, link to new page, load memory-->
+      <button class="Btn col-2" id="loadBtn">See Saved</button>
+     </div>
 
     <script
   src="https://code.jquery.com/jquery-3.6.1.js"
