@@ -3,6 +3,7 @@ var timeEl = document.querySelectorAll('#time');
 var currentTimeEl = $('#currentDay');
 var refreshBtnEl = $('#refreshBtn');
 var themeBtnEl = $('.switch');
+var timeBlockEl = $('.time-block');
 
 
 //displays current time on page
@@ -17,21 +18,22 @@ refreshBtnEl.on('click', function () {
 function highlightHour (){
     var timeNow = moment().hours();
 
-    timeEl.forEach(function(){
-        var hourIndicator = parseInt(timeEl.attr('id').split('-')[1]);
-
+    for (var i = 0; i < timeBlockEl.length; i++){
+        var hourIndicator = timeBlockEl[i].id
+ // addClass() not working, fix later
         if (hourIndicator == timeNow){
-            timeEl.addClass('present');
-        } else if (hourIndicator < currentHour){
-            timeEl.removeClass('present');
-            timeEl.addClass('past');
+            timeEl[i].setAttribute('class','present col-12 col-md-6 col-lg-2 hour')
+        } else if (hourIndicator < timeNow){
+           
+            timeEl[i].setAttribute('class','past col-12 col-md-6 col-lg-2 hour')
         } else {
-            timeEl.removeClass('present');
-            timeEl.removeClass('past');
-            timeEl.addClass('future');
+            timeEl[i].setAttribute('class','future col-12 col-md-6 col-lg-2 hour')
         }
-    });
-}
+    };
+    }
+ 
+
+highlightHour();
 //  var isDark = true;
 //Activity 3 Week 5 //Dark-light mode toogle switch //Edit this!
   
