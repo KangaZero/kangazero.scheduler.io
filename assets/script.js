@@ -4,6 +4,10 @@ var currentTimeEl = $('#currentDay');
 var refreshBtnEl = $('#refreshBtn');
 var themeBtnEl = $('.switch');
 var timeBlockEl = $('.time-block');
+//target class not id if more than one exist
+var saveBtnEl = $('.saveBtn');
+var textareaEl = document.querySelectorAll('#description');
+
 
 
 //displays current time on page
@@ -13,6 +17,18 @@ currentTimeEl.text(moment().format('dddd, MMMM Do'));
 refreshBtnEl.on('click', function () {
     location.reload();
   });
+
+//saveButton add save function to local storage
+
+$(document).ready(function(){
+
+for (var i = 0; i < saveBtnEl.length; i++)
+saveBtnEl.on('click',function(){
+     //to target within its own block
+     localStorage.setItem($(this).parent('.time-block').attr('id'), $(this).siblings('.description').val());
+    })
+    });
+    
 
 //test 
 function highlightHour (){
