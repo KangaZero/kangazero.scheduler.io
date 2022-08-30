@@ -7,9 +7,7 @@ var timeBlockEl = $('.time-block');
 //target class not id if more than one exist
 var saveBtnEl = $('.saveBtn');
 var textareaEl = document.querySelectorAll('#description');
-
-
-
+var notificationEl = $('.notification');
 //displays current time on page
 currentTimeEl.text(moment().format('dddd, MMMM Do'));
 
@@ -22,11 +20,23 @@ refreshBtnEl.on('click', function () {
 
 $(document).ready(function(){
 
-for (var i = 0; i < saveBtnEl.length; i++)
 saveBtnEl.on('click',function(){
      //to target within its own block
-     localStorage.setItem($(this).parent('.time-block').attr('id'), $(this).siblings('.description').val());
+     var time = $(this).parent('.time-block').attr('id');
+     var description = $(this).siblings('.description').val();
+
+     localStorage.setItem(time, description);
+
+     //notification 
+     $('.notification').text("Text saved for " + moment(time, "HH").format("hh A"));
+ 
+     //notification auto disappears after 10 seconds
+     setTimeout(function(){
+        $('.notification').text(" ");
+     }, 10000)
     })
+
+
     });
     
 
@@ -48,6 +58,8 @@ function highlightHour (){
     };
     }
  
+ //Check current time every minute
+ setInterval(highlightHour, 60000);  
 
 highlightHour();
 //  var isDark = true;
