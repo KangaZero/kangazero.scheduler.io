@@ -25,20 +25,27 @@ saveBtnEl.on('click',function(){
      var time = $(this).parent('.time-block').attr('id');
      var description = $(this).siblings('.description').val();
 
-     localStorage.setItem(time, description);
+    var save = localStorage.setItem(time, description);
 
      //notification 
-     $('.notification').text("Text saved for " + moment(time, "HH").format("hh A"));
+     notificationEl.text("Text saved for " + moment(time, "HH").format("hh A"));
  
      //notification auto disappears after 10 seconds
      setTimeout(function(){
-        $('.notification').text(" ");
+        notificationEl.text(" ");
      }, 10000)
     })
-
-
+     
     });
     
+//load function
+function load (){
+    for (var i = 0; i < timeBlockEl.length; i++){
+    //how to at i to "#" in $()?
+           $("#9 .description").text(localStorage.getItem(timeBlockEl[0].id));
+    } 
+}
+
 
 //test 
 function highlightHour (){
@@ -62,17 +69,5 @@ function highlightHour (){
  setInterval(highlightHour, 60000);  
 
 highlightHour();
-//  var isDark = true;
-//Activity 3 Week 5 //Dark-light mode toogle switch //Edit this!
-  
-//   themeBtnEl.on('click', function () {
-//     if (isDark) {
-//       $('body').css({ 'background-color': '#d9e9e8', color: '#1a1a1a' });
-//       isDark = !isDark;
-//     } else {
-//       $('body').css({ 'background-color': '#1a1a1a', color: '#d9e9e8' });
-//       isDark = !isDark;
-//     }
-//   });
-
+load();
 
