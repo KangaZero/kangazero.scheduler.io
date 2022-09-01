@@ -11,13 +11,13 @@ var notificationEl = $('.notification');
 //displays current time on page
 currentTimeEl.text(moment().format('dddd, MMMM Do'));
 
-//Activity 3 Week 5 //refreshes page to clear text
+//Activity 3 Week 5 //refreshes page to clear text and localStorage
 refreshBtnEl.on('click', function () {
+    localStorage.clear();
     location.reload();
   });
 
-//saveButton add save function to local storage
-
+//save function
 $(document).ready(function(){
 
 saveBtnEl.on('click',function(){
@@ -38,29 +38,40 @@ saveBtnEl.on('click',function(){
      
     });
     
-//load function
-function load (){
-    for (var i = 0; i < timeBlockEl.length; i++){
-    //how to at i to "#" in $()?
-           $("#9 .description").text(localStorage.getItem(timeBlockEl[0].id));
+//load function //tutor recommendation
+function load (){  //i < 18
+    for (var i = 9; i <= 17; i++){
+ 
+        var task = localStorage.getItem(i);
+        if (task){
+            $(`#${i} .description`).text(task)
+        } 
+        // original method, would need to manually add all elements
+        //    $("#9 .description").text(localStorage.getItem(timeBlockEl[0].id));
     } 
 }
 
 
 //test 
 function highlightHour (){
-    var timeNow = moment().hours();
+  //  var timeNow = moment().hours();
+  var timeNow = 12;
 
     for (var i = 0; i < timeBlockEl.length; i++){
         var hourIndicator = timeBlockEl[i].id
  // addClass() not working, fix later
         if (hourIndicator == timeNow){
-            timeEl[i].setAttribute('class','present col-12 col-md-6 col-lg-2 hour')
+            timeEl[i].classList.add('present')
+            console.log(1)
+        //    timeEl[i].setAttribute('class','present col-12 col-md-6 col-lg-2 hour')
         } else if (hourIndicator < timeNow){
-           
-            timeEl[i].setAttribute('class','past col-12 col-md-6 col-lg-2 hour')
+            timeEl[i].classList.add('past')
+            console.log(2)
+           // timeEl[i].setAttribute('class','past col-12 col-md-6 col-lg-2 hour')
         } else {
-            timeEl[i].setAttribute('class','future col-12 col-md-6 col-lg-2 hour')
+            timeEl[i].classList.add('future')
+            console.log(3)
+           // timeEl[i].setAttribute('class','future col-12 col-md-6 col-lg-2 hour')
         }
     };
     }
