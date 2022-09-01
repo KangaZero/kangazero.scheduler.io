@@ -19,41 +19,30 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <!--Add Task icon from Google fonts-->
+    <!--Save Font/Symbol added-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
-    <!--create sliding button, light & dark css properties, btn function-->
-    <!--https://www.w3schools.com/howto/howto_css_switch.asp-->
-    <!-- <div class="dark-light-container display-flex row justify-content-end">
-      <label class="switch light">
-        Light Mode
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-    </div> -->
     <header class="jumbotron col-10 col-sm-12">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <!--timer added-->
+      <!--Current Time shown-->
       <p id="currentDay" class="lead"></p>
+      <!--Notification function working-->
       <p class="notification"></p>
     </header>
     <div class="container">
-    
+       <!--Currently not responsive enough for small screens-->
         <div id ="9" class="row time-block mb-sm-2 mb-md-0">
-          <!--button function, content save function, highlight current, previous and next hour function to make-->
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">9AM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
           <button class="col-12 col-md-12 col-lg-1 saveBtn Btn" id="checkButton"><span class="material-symbols-outlined">
             add_task
             </span></button>
         </div>
-    
-    
         <div id ="10" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">10AM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -61,7 +50,6 @@
             add_task
             </span></button>
         </div>
- 
         <div id ="11" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">11AM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -69,7 +57,6 @@
             add_task
             </span></button>
         </div>
-
         <div id ="12" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">12PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -77,7 +64,6 @@
             add_task
             </span></button>
         </div>
-   
         <div id ="13"  class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">1PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -85,7 +71,6 @@
             add_task
             </span></button>
         </div>
-     
         <div id ="14" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">2PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -93,7 +78,6 @@
             add_task
             </span></button>
         </div>
-        
         <div id ="15" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">3PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -101,7 +85,6 @@
             add_task
             </span></button>
         </div>
- 
         <div id ="16" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">4PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -109,7 +92,6 @@
             add_task
             </span></button>
         </div>
-
         <div id ="17" class="row time-block mb-sm-2 mb-md-0">
           <div class="col-12 col-md-6 col-lg-2 hour" id="time">5PM</div>
           <textarea class="col-12 col-md-6 col-lg-9 description" id="description"></textarea>
@@ -117,17 +99,10 @@
             add_task
             </span></button>
         </div>
-  
      </div>
+     <!--Refresh button function working-->
      <div class="display-flex row justify-content-around m-3" id="extras">
       <button class="btn col-2" id="refreshBtn">Clear All</button>
-   
-      <!-- <label class="switch light">
-        Light Mode
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
-      <button class="switch">test</button> -->
      </div>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

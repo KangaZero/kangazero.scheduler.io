@@ -51,26 +51,23 @@ function load (){  //i < 18
     } 
 }
 
-
-//test 
+//highlights current, past, and future hours with their own colors.
 function highlightHour (){
-  //  var timeNow = moment().hours();
-  var timeNow = 12;
+
+  var timeNow = moment().hours();
 
     for (var i = 0; i < timeBlockEl.length; i++){
         var hourIndicator = timeBlockEl[i].id
- // addClass() not working, fix later
         if (hourIndicator == timeNow){
+            //tutor recomendation 
             timeEl[i].classList.add('present')
-            console.log(1)
+        //original method    
         //    timeEl[i].setAttribute('class','present col-12 col-md-6 col-lg-2 hour')
         } else if (hourIndicator < timeNow){
-            timeEl[i].classList.add('past')
-            console.log(2)
+            timeEl[i].classList.add('past')  
            // timeEl[i].setAttribute('class','past col-12 col-md-6 col-lg-2 hour')
         } else {
-            timeEl[i].classList.add('future')
-            console.log(3)
+            timeEl[i].classList.add('future')      
            // timeEl[i].setAttribute('class','future col-12 col-md-6 col-lg-2 hour')
         }
     };
